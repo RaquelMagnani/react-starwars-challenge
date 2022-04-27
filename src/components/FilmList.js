@@ -1,26 +1,27 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const FilmList = ({ films }) => {
-  const navigate = useNavigate();
-  const handleFilmDetailsClick = () => {
-    navigate("/film");
-  };
+  function getFilmId(url) {
+    return url[url.length - 2];
+  }
+  console.log(films);
   return (
     <>
-      <h1>teste</h1>
       <ul>
         {films.map((film) => {
           return (
             <li>
               {film.title}
               {` episode: ${film.episode_id}`}
-              <button onClick={handleFilmDetailsClick}>details</button>
-              {/* <img
-                src={`https://starwars-visualguide.com/assets/img/films/${film.id}.jpg`}
-                alt="imagem "
-              /> */}
+              <Link to={`/movie/${getFilmId(film.url)}`}>details</Link>
+              <img
+                alt={`poster of ${film.title}`}
+                src={`https://starwars-visualguide.com/assets/img/films/${getFilmId(
+                  film.url
+                )}.jpg`}
+              />
             </li>
           );
         })}
