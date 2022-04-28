@@ -18,15 +18,15 @@ const CharactersList = ({ cast }) => {
   }, [cast]);
 
   return (
-    <ol>
+    <ul className="container-infos">
       {characters.map((character) => (
         <li key={`unique-${character.index}-`} style={{ textAlign: "left" }}>
-          <Link to={`/people/${getIdFromUrl(character.url)}`}>
+          <Link className="link" to={`/people/${getIdFromUrl(character.url)}`}>
             {character.name}
           </Link>
         </li>
       ))}
-    </ol>
+    </ul>
   );
 };
 
