@@ -14,7 +14,6 @@ const Film = () => {
   return (
     <>
       <header>
-        <h1>{film.title}</h1>
         <img
           alt={`poster of ${film.title}`}
           src={`https://starwars-visualguide.com/assets/img/films/${id}.jpg`}
@@ -22,16 +21,18 @@ const Film = () => {
       </header>
       <main>
         <div>
-          <p></p>
+          <h1>{film.title}</h1>
+          <h2>{`Premiere Year: ${new Date(
+            film.release_date
+          ).getFullYear()}`}</h2>
+          <p>{`Director: ${film.director}`}</p>
+          <p>{`About: ${film.opening_crawl}`}</p>
+        </div>
+        <div>
+          <p>Characters: </p>
+          <CharactersList cast={film.characters} />
         </div>
       </main>
-      <p></p>
-      <p>{`About: ${film.opening_crawl}`}</p>
-      <p>{`Director: ${film.director}`}</p>
-      <div>
-        <p>Characters: </p>
-        <CharactersList cast={film.characters} />
-      </div>
     </>
   );
 };
