@@ -19,7 +19,12 @@ const CardFilm = (props) => {
             )}.jpg`}
           />
           <Card.Body>
-            <Link to={`/film/${getIdFromUrl(film.url)}`}>{film.title}</Link>
+            <Link
+              className="d-flex justify-content-center link"
+              to={`/film/${getIdFromUrl(film.url)}`}
+            >
+              {film.title}
+            </Link>
           </Card.Body>
         </Card>
       </CardGroup>
