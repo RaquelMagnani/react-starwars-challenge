@@ -1,33 +1,25 @@
 import React from "react";
-
-import { Link } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
+import "../styles/filmList.scss";
+import CardFilm from "./CardFilm";
 
 const FilmList = ({ films }) => {
-  function getFilmId(url) {
-    return url[url.length - 2];
-  }
   console.log(films);
   return (
     <>
-      <ul>
-        {films.map((film) => {
-          return (
-            <li>
-              {film.title}
-              {` episode: ${film.episode_id}`}
-              <Link to={`/movie/${getFilmId(film.url)}`}>details</Link>
-              <img
-                alt={`poster of ${film.title}`}
-                src={`https://starwars-visualguide.com/assets/img/films/${getFilmId(
-                  film.url
-                )}.jpg`}
-              />
-            </li>
-          );
-        })}
-      </ul>
+      <Container fluid>
+        <Row>
+          {films.map((film) => {
+            return (
+              <Col>
+                <CardFilm film={film} />
+              </Col>
+            );
+          })}
+        </Row>
+      </Container>
+      ;
     </>
   );
 };
-
 export default FilmList;
