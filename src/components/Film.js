@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
+import CharactersList from "./CharacterList";
 
 const Film = () => {
   const [film, setFilm] = useState({});
@@ -12,12 +13,25 @@ const Film = () => {
   }, []);
   return (
     <>
-      <p>{film.title}</p>
-      <p>{film.director}</p>
-      <img
-        alt={`poster of ${film.title}`}
-        src={`https://starwars-visualguide.com/assets/img/films/${id}.jpg`}
-      />
+      <header>
+        <h1>{film.title}</h1>
+        <img
+          alt={`poster of ${film.title}`}
+          src={`https://starwars-visualguide.com/assets/img/films/${id}.jpg`}
+        />
+      </header>
+      <main>
+        <div>
+          <p></p>
+        </div>
+      </main>
+      <p></p>
+      <p>{`About: ${film.opening_crawl}`}</p>
+      <p>{`Director: ${film.director}`}</p>
+      <div>
+        <p>Characters: </p>
+        <CharactersList cast={film.characters} />
+      </div>
     </>
   );
 };
