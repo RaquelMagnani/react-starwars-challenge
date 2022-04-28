@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, Card, CardGroup } from "react-bootstrap";
+import { Card, CardGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "../styles/card.scss";
+import "../styles/cardFilm.scss";
 import { getIdFromUrl } from "../utils";
 
 const CardFilm = (props) => {
@@ -19,10 +19,7 @@ const CardFilm = (props) => {
             )}.jpg`}
           />
           <Card.Body>
-            <Card.Title>{film.title}</Card.Title>
-            <Button variant="outline-primary">
-              <Link to={`/movie/${getIdFromUrl(film.url)}`}>{film.title}</Link>
-            </Button>
+            <Link to={`/film/${getIdFromUrl(film.url)}`}>{film.title}</Link>
           </Card.Body>
         </Card>
       </CardGroup>
