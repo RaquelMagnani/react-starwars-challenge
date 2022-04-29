@@ -23,6 +23,9 @@ const GenericCard = (props) => {
             >
               {props.name}
             </Link>
+            <button>
+              <i class="bi bi-star"></i>
+            </button>
           </Card.Body>
         </Card>
       </CardGroup>
