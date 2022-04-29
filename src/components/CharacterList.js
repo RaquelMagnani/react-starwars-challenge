@@ -21,6 +21,7 @@ const CharactersList = ({ cast }) => {
     <ul className="container-infos">
       {characters.map((character) => (
         <li key={`unique-${character.index}-`} style={{ textAlign: "left" }}>
+          <i class="bi bi-person-circle p-2"></i>
           <Link className="link" to={`/people/${getIdFromUrl(character.url)}`}>
             {character.name}
           </Link>
