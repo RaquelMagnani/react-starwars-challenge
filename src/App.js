@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Character from "./components/Character";
 
 import NavigationMenu from "./components/NavigationMenu";
+import Footer from "./components/Footer";
 
 function App() {
   const [films, setFilms] = useState([]);
@@ -24,6 +25,7 @@ function App() {
           <Route path="/people/:id" element={<Character />}></Route>
         </Routes>
       </Router>
+      <Footer></Footer>
     </>
   );
 }
