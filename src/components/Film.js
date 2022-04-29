@@ -15,38 +15,43 @@ const Film = () => {
     <Container fluid className="">
       <Row>
         <Col md={8}>
-          <div className="container-infos ">
-            <h1>{film.title}</h1>
-            <p>
-              <span>Premiere Year: </span>
-              {new Date(film.release_date).getFullYear()}
-            </p>
-            <p>
-              {" "}
-              <span>Director: </span>
-              {film.director}
-            </p>
-            <p>
-              <span>About: </span>
-              {film.opening_crawl}
-            </p>
-          </div>
           <Row>
-            <div className="container-infos">
-              <span>Characters: </span>
+            <Col>
+              <div className="container-infos ">
+                <h1>{film.title}</h1>
+                <p>
+                  <span>Premiere Year: </span>
+                  {new Date(film.release_date).getFullYear()}
+                </p>
+                <p>
+                  {" "}
+                  <span>Director: </span>
+                  {film.director}
+                </p>
+                <p>
+                  <span>About: </span>
+                  {film.opening_crawl}
+                </p>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div className="container-infos">
+                <span>Characters: </span>
 
-              <CharactersList cast={film.characters} />
-            </div>
+                <CharactersList cast={film.characters} />
+              </div>
+            </Col>
           </Row>
         </Col>
-        <Col md={3}>
+        <Col md={4}>
           <img
             alt={`poster of ${film.title}`}
             src={`https://starwars-visualguide.com/assets/img/films/${id}.jpg`}
           />
         </Col>
       </Row>
-      <Row></Row>
     </Container>
   );
 };
