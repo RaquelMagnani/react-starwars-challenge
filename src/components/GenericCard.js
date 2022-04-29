@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "../styles/cardFilm.scss";
 import { getIdFromUrl } from "../utils";
 
 const GenericCard = (props) => {
