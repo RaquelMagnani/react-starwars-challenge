@@ -12,17 +12,13 @@ const Film = () => {
       .then((data) => setFilm(data));
   }, []);
   return (
-    <Container fluid className="">
+    <Container fluid>
       <Row>
-        <Col md={8}>
+        <Col className md={8}>
           <Row>
             <Col>
-              <div className="container-infos ">
+              <div className="container-infos p-2 mb-2 ">
                 <h1>{film.title}</h1>
-                <p>
-                  <span>Premiere Year: </span>
-                  {new Date(film.release_date).getFullYear()}
-                </p>
                 <p>
                   {" "}
                   <span>Director: </span>
@@ -37,7 +33,7 @@ const Film = () => {
           </Row>
           <Row>
             <Col>
-              <div className="container-infos">
+              <div className="container-infos p-2">
                 <span>Characters: </span>
 
                 <CharactersList cast={film.characters} />
