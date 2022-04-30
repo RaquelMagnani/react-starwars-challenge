@@ -1,35 +1,35 @@
 $body-bg: #1c1c1c;
+$primary: #f0a400;
+$secondary: #f5f5f5;
 
 $font-family-sans-serif: "Poppins", Helvetica, Arial, sans-serif !default;
 $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 // Import Bootstrap and its default variables
-:root {
-  --orange: #f0a400;
-  --white: #f5f5f5;
-  --gray-background: #4e4e4e;
-  --black-link: #000000;
-}
 
 .link {
-  color: var(--black-link);
+  color: $body-bg;
   align-items: center;
   &:hover {
-    color: var(--orange);
+    color: $primary;
   }
 }
+.navigationLink {
+  font-size: 25px;
+}
 h1 {
-  font-size: 30px;
-  color: var(--white);
+  $h1-font-size: 35px;
+  color: $secondary;
   border-bottom: 2px solid #f0a400;
   padding: 5px;
   margin-bottom: 5px;
 }
 p,
 li {
-  color: var(--orange);
+  list-style-type: none;
+  color: $primary;
 }
 span {
-  color: var(--white);
+  color: $secondary;
 }
 
 img {
@@ -40,7 +40,7 @@ span {
   font-size: 20px;
 }
 .container-infos {
-  background-color: var(--gray-background);
+  background-color: #4e4e4e;
 }
 
 @import "~bootstrap/scss/bootstrap.scss";
