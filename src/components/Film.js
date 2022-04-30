@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import CharactersList from "./CharacterList";
 
@@ -34,6 +34,12 @@ const Film = () => {
 
     fetchFilmData();
   }, []);
+
+  function handleBookmark() {
+    setFilm((previous) => {
+      return { ...previous, is_bookmarked: !previous.is_bookmarked };
+    });
+  }
 
   useEffect(() => {
     if (filmDataReceived && film && film.characters.length > 0) {
@@ -82,7 +88,16 @@ const Film = () => {
             <Row>
               <Col>
                 <div className="container-infos p-2 mb-2 ">
-                  <h1>{film.title}</h1>
+                  <div className="d-flex justify-content-between">
+                    <h1>{film.title}</h1>
+                    <Button onClick={() => handleBookmark(film.title)}>
+                      {film.is_bookmarked ? (
+                        <i className="bi bi-star-fill"></i>
+                      ) : (
+                        <i className="bi bi-star"></i>
+                      )}
+                    </Button>
+                  </div>
                   <p>
                     <span>Director: </span>
                     {film.director}

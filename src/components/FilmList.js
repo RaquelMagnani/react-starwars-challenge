@@ -17,6 +17,7 @@ const FilmList = () => {
     const film = cloneFilms.find((film) => {
       return film.title === name;
     });
+
     film.is_bookmarked = !film.is_bookmarked;
     setFilms(cloneFilms);
   }
