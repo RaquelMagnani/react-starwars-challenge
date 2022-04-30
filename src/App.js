@@ -8,19 +8,12 @@ import NavigationMenu from "./components/NavigationMenu";
 import Footer from "./components/Footer";
 
 function App() {
-  const [films, setFilms] = useState([]);
-  useEffect(() => {
-    fetch("https://swapi.dev/api/films")
-      .then((response) => response.json())
-      .then((data) => setFilms(data.results));
-  }, []);
-
   return (
     <>
       <NavigationMenu></NavigationMenu>
       <Router>
         <Routes>
-          <Route path="/" exact element={<FilmList films={films} />}></Route>
+          <Route path="/" exact element={<FilmList />}></Route>
           <Route path="/film/:id" element={<Film />}></Route>
           <Route path="/people/:id" element={<Character />}></Route>
         </Routes>
