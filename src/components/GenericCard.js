@@ -22,8 +22,12 @@ const GenericCard = (props) => {
             >
               {props.name}
             </Link>
-            <button>
-              <i class="bi bi-star"></i>
+            <button onClick={() => props.handleBookmark(props.name)}>
+              {props.isBookmarked ? (
+                <i className="bi bi-star-fill"></i>
+              ) : (
+                <i className="bi bi-star"></i>
+              )}
             </button>
           </Card.Body>
         </Card>
