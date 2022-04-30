@@ -80,6 +80,7 @@ const Character = () => {
 
         <Col md={6}>
           <img
+            style={{ width: "100%" }}
             alt={`poster of ${characterInfo.title}`}
             src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
           />
