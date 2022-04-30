@@ -26,9 +26,14 @@ const FilmList = () => {
       <Container fluid>
         <h1 className="d-flex justify-content-center">Star Wars Movies!</h1>
         <Row>
-          {films.map((film) => {
+          {films.map((film, index) => {
             return (
-              <Col lg={3} md={6} className="mt-3 d-flex justify-content-center">
+              <Col
+                key={`u-${film.episode_id}-${index}`}
+                lg={3}
+                md={6}
+                className="mt-3 d-flex justify-content-center"
+              >
                 <GenericCard
                   name={film.title}
                   resourceImage="films"
