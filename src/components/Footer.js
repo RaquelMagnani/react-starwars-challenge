@@ -5,10 +5,10 @@ import yoda from "../images/yoda.png";
 const Footer = () => {
   return (
     <Container className=" d-flex justify-content-center text-center mt-5 ">
-      <p>
-        Made with the Force by{" "}
+      <p className="footer">
+        Made with <i className="bi bi-heart"></i>  by 
         <a href="https://www.linkedin.com/in/raquel-magnani-pinheiro/">
-          Raquel Magnani Pinheiro
+           Raquel Magnani Pinheiro
         </a>
         !
         <br />
