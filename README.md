@@ -19,7 +19,7 @@
   <p align="center">
     Project made using
     <br />
-    <a href="https://swapi.dev/"><strong>Star Wars API »</strong></a>
+    <a href="https://swapi.dev/"><strong>Star Wars API </strong></a> and retrieving images from <a href="https://starwars-visualguide.com/#/"> <strong>Star Wars: A Visual Guide </strong></a>
     <br />
     <br />
     <a href="https://maytheforcebewithme.netlify.app/">View Demo</a>
@@ -67,7 +67,6 @@ So I used `create react app` to start the project, and `react-bootstrap` to give
 
 ### Built With
 
-This
 
 * [React.js](https://reactjs.org/)
 * [React-Bootstrap and Sass](https://react-bootstrap.netlify.app/)
