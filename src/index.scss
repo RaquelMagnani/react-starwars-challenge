@@ -6,16 +6,7 @@ $font-family-sans-serif: "Poppins", Helvetica, Arial, sans-serif !default;
 $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 // Import Bootstrap and its default variables
 
-.link {
-  color: $body-bg;
-  align-items: center;
-  &:hover {
-    color: $primary;
-  }
-}
-.navigationLink {
-  font-size: 25px;
-}
+
 h1 {
   $h1-font-size: 35px;
   color: $secondary;
@@ -43,4 +34,12 @@ span {
   background-color: #4e4e4e;
 }
 
+.link {
+  color: $secondary;
+  align-items: center;
+  &:hover {
+    color: $primary;
+  }
+
+}
 @import "~bootstrap/scss/bootstrap.scss";

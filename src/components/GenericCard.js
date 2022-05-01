@@ -17,7 +17,7 @@ const GenericCard = (props) => {
           />
           <Card.Body>
             <Link
-              className="d-flex justify-content-center link"
+              className="d-flex justify-content-center"
               to={`/${props.resource}/${getIdFromUrl(props.url)}`}
             >
               {props.name}

@@ -123,7 +123,7 @@ const Film = () => {
             </Row>
           </Col>
           <Col md={4}>
-            <img
+            <img style={{ width: "100%" }}
               alt={`poster of ${film.title}`}
               src={`https://starwars-visualguide.com/assets/img/films/${id}.jpg`}
             />
