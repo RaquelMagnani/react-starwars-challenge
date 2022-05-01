@@ -10,9 +10,6 @@ const NavigationMenu = () => {
           <img src={logo} alt="Star Wars logo" style={{ width: "5rem" }} />
         </NavbarBrand>
       </Nav.Item>
-      <Nav.Item className=" d-flex align-items-center navigationLink">
-        <Nav.Link href="/favorite">Favorites</Nav.Link>
-      </Nav.Item>
     </Nav>
   );
 };
