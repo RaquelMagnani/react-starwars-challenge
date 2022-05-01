@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+<div id="top"></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="./src/images/logo-readme.png" alt="Logo" width="80" >
+  </a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <h3 align="center">Page with informations about Star Wars movies and characters.</h3>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <p align="center">
+    Project made using
+    <br />
+    <a href="https://swapi.dev/"><strong>Star Wars API »</strong></a>
+    <br />
+    <br />
+    <a href="https://maytheforcebewithme.netlify.app/">View Demo</a>
+    
+  </p>
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#next-steps">Next Steps</a></li>
+  </ol>
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-## Learn More
+After working during 8 months only with Angular, this is my first project using react since 2020! ☺️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+So I used `create react app` to start the project, and `react-bootstrap` to give me velocity to implement a mobile first application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Built With
 
-### Making a Progressive Web App
+This
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* [React.js](https://reactjs.org/)
+* [React-Bootstrap and Sass](https://react-bootstrap.netlify.app/)
+* [Jest](https://jestjs.io/docs/tutorial-react)
+* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) 
+* [Lodash - clonedeep](https://www.npmjs.com/package/lodash.clonedeep)
+* React Hooks
 
-### Advanced Configuration
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Getting Started
 
-### Deployment
+To get a local copy up and running follow these simple example steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Prerequisites
 
-### `npm run build` fails to minify
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Installation
+
+
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/RaquelMagnani/react-starwars-challenge.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] The page shows a list of films consumed from Star Wars API
+- [x] When a user clicks on an element of the film list, shows :
+    - [x] Film data
+    - [x] Director data
+    - [x] List of characters
+- [x] When a user clicks on a character, shows its information
+- [x] Users can mark a film and a character as favorite
+- [ ] Shows a list of the films and characters marked as favorite _(in progress)_
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+## Next steps
+
+Some tasks that I wanna impleament to make the project more complete :
+- [ ] Create favorites page. With this I can learn how to implement global state (or a better way to share data between components);
+- [ ] Increase test coverage. I had quite difficult to mock fetch api, so hope to learn how to do that and test the components that consumes data from api.
+- [ ] Improve page style.
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/raquel-magnani-pinheiro/
