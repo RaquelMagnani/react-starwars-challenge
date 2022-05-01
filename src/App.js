@@ -1,8 +1,8 @@
 import React from "react";
-import FilmList from "./components/FilmList";
-import Film from "./components/Film";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Character from "./components/Character";
+import FilmList from "./Pages/FilmList";
+import Film from "./Pages/Film";
+import Character from "./Pages/Character";
 import NavigationMenu from "./components/NavigationMenu";
 import Footer from "./components/Footer";
 

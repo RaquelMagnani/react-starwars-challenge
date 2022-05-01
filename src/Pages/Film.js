@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import CharactersList from "./CharacterList";
+import CharactersList from "../components/CharacterList";
 
 const Film = () => {
   const [film, setFilm] = useState({});

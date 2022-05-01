@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cloneDeep from "lodash.clonedeep";
 import { Col, Container, Row } from "react-bootstrap";
-import GenericCard from "./GenericCard";
+import GenericCard from "../components/GenericCard";
 
 const FilmList = () => {
   const [films, setFilms] = useState([]);
