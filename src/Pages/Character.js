@@ -18,6 +18,7 @@ const Character = () => {
     if (characterInfo !== {}) {
       const response = await fetch(characterInfo.homeworld);
       const data = await response.json();
+      console.log('Character Info', characterInfo)
       setHomeWorld(data);
     }
   };

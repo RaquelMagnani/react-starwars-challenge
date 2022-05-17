@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import cloneDeep from "lodash.clonedeep";
 import { Col, Container, Row } from "react-bootstrap";
 import GenericCard from "../components/GenericCard";
 
 const FilmList = () => {
   const [films, setFilms] = useState([]);
+  
 
   useEffect(() => {
     fetch("https://swapi.dev/api/films")
@@ -12,15 +12,12 @@ const FilmList = () => {
       .then((data) => setFilms(data.results));
   }, []);
 
-  function handleBookmark(name) {
-    const cloneFilms = cloneDeep(films);
-    const film = cloneFilms.find((film) => {
-      return film.title === name;
+  function handleBookmark() {
+    setFilms((previous) => {
+      return { ...previous, is_bookmarked: !previous.is_bookmarked };
     });
-
-    film.is_bookmarked = !film.is_bookmarked;
-    setFilms(cloneFilms);
   }
+  
 
   return (
     <>
